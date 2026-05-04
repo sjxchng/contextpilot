@@ -2,8 +2,6 @@
 
 An agentic research assistant with a live context management system. Demonstrates how long-horizon AI agents can dynamically manage their context window — compressing, scoring, and evicting chunks to stay within token limits without losing critical information.
 
-Built as a proof-of-concept for the kind of infrastructure Pacific is building at enterprise scale.
-
 ---
 
 ## What It Does
@@ -109,18 +107,3 @@ score = 0.5 × relevance + 0.3 × recency + 0.2 × access_frequency
 - **Access frequency**: Rewards chunks that get referenced often
 
 When context exceeds 75% capacity, chunks are sorted by score ascending and evicted until usage drops below 60% — analogous to a database buffer pool flushing dirty pages under memory pressure.
-
----
-
-## Relation to Pacific's Mission
-
-Pacific is building an Enterprise Context Management System so AI agents can reliably operate on company-specific data. ContextPilot demonstrates one layer of that stack: the in-agent context buffer that decides what information an agent keeps, compresses, or discards during a long-horizon task.
-
-Just as OS and database buffer management made personal computing reliable and efficient, intelligent context management makes personal AI reliable and efficient.
-
----
-
-## Author
-
-Siwoo Chung  
-[github.com/sjxchng](https://github.com/sjxchng)
