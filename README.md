@@ -12,7 +12,7 @@ ContextPilot runs a multi-step research agent on any topic. At each step, a cont
 - **Evicts** the lowest-scoring chunks when usage exceeds 75% of the token budget
 - **Tracks** TTFT (time to first token), token savings, and eviction history in real time
 
-The eviction policy is inspired by **database buffer pool management** (LRU + cost model from CS 186), extended with semantic relevance scoring. Higher context pressure = more aggressive eviction, keeping the agent sharp without hitting token limits.
+The eviction policy is inspired by **database buffer pool management**, combining LRU-style recency with a custom importance score based on semantic relevance and access frequency.
 
 ---
 
